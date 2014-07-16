@@ -47,23 +47,6 @@ module RealZip
     def dirs(given)
       collect_only(given, :dir).map { |x| x.join ?/ }
     end 
-
-
-    # def add_file( zippyfile, dst_dir, f )
-    #   zippyfile["#{dst_dir}/#{f}"] = File.open(f)
-    #    if File.file?(f)
-    #       FileUtils.copy_file f, dst_dir
-    #   end
-    # end
-
-    # def add_dir( zippyfile, dst_dir, d )
-    #   glob = "#{d}/**/*"
-    #   FileList.new( glob ).each { |f|
-    #   if (File.file?(f))
-    #     add_file zippyfile, dst_dir, f
-    #   end
-    #   }
-    # end
 end 
 
 
@@ -78,13 +61,8 @@ end
           z.dir.mkdir(dir) unless z.file.exist? dir
         end
         files(struct).each do |file|
-          z.file.open(file, "w") { |f| 
-           File.open(f) = ["#{struct}/#{f}"]
-           if File.file?(f)
-               FileUtils.copy_file f, struct
-           end
-           f.write file }
-        end      
+          z.file.open(file, "w") { |f| f.write File.new(file, "r") }
+        end     
       end
     end
 
@@ -154,3 +132,20 @@ Zip::ZipFile.open file_name do |z|
   z.file.exist? 'root_dir/empty_dir' or raise # no empty dirs
 end 
 File.delete file_name
+    
+
+    # def add_file( zippyfile, dst_dir, f )
+    #   zippyfile["#{dst_dir}/#{f}"] = File.open(f)
+    #    if File.file?(f)
+    #       FileUtils.copy_file f, dst_dir
+    #   end
+    # end
+
+    # def add_dir( zippyfile, dst_dir, d )
+    #   glob = "#{d}/**/*"
+    #   FileList.new( glob ).each { |f|
+    #   if (File.file?(f))
+    #     add_file zippyfile, dst_dir, f
+    #   end
+    #   }
+    # end
