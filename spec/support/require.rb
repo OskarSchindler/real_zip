@@ -1,1 +1,1 @@
-require 'fake_zip'
+require 'real_zip'

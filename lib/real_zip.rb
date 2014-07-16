@@ -2,7 +2,6 @@ require "real_zip/version"
 require 'yaml'
 require 'forwardable'
 require 'zip/zipfilesystem'
-  require 'zippyfile'
 def RealZip file, structure
   RealZip.new file, structure
 end

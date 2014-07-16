@@ -22,6 +22,5 @@ Gem::Specification.new do |spec|
 
   # deps:
   spec.add_development_dependency "rspec"
-  spec.add_runtime_dependency "rubyzip"  
-  spec.add_runtime_dependency "zippy"  
+  spec.add_runtime_dependency "rubyzip"    
 end
