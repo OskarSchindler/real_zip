@@ -1,11 +1,15 @@
 # realZip
 
+## Warning
+This gem is currently under development. Please refrain from using it.
+
 ## Usage
 
 ```ruby
 require 'real_zip'
 
-# create zip file with given file structure
+# create zip file with given file structure and transfer files to the directory of your choice within the zip file
+
 RealZip 'temp.zip', {dir1:[:f1,:f2],dir2:[:f3,{dir4:[:f4]}]}
 
 # ensure it works
