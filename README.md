@@ -34,6 +34,9 @@ doc/pdf/rb/
 doc/html/a.html
 doc/pdf/c.pdf
 doc/pdf/rb/b.rb
+
+# Symlinks or Softlinks can also be used to reference files.
+
 ```
 
 
