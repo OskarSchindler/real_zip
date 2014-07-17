@@ -22,7 +22,6 @@ rb/
 html/a.html
 pdf/c.pdf
 rb/b.rb
-```
 
 RealZip 'temp.zip', {'doc/html' => ["/home/Files/a.html"], 'doc/pdf' => ["/home/Files/c.pdf"], 'doc/pdf/rb' => ["/home/Files/b.rb"]}
 
@@ -61,4 +60,4 @@ Or install it yourself as:
 5. Create new Pull Request
 
 ## Acknowledgement
-This software is built upon Alexander K's Fake_Zip gem. A hearty thanks to him for making it freely available. This project would not be possible without <a href="https://github.com/rbaghele">Ravi Baghele</a>'s major input in implementing the core file tranfer functionality.I would also like to thank <a href="https://github.com/indermishra">Indrajeet Mishra</a> for his valuable insights about testing and debugging the gem.Our team leader <a href ="https://github.com/stormfire">Mr. Pankaj Gupta</a> has provided invaluable support and guidance throughout the project.
+This software is built upon Alexander K's Fake_Zip gem. A hearty thanks to him for making it freely available. This project would not be possible without [Ravi Baghele](https://github.com/rbaghele)'s major input in implementing the core file tranfer functionality.I would also like to thank <a href="https://github.com/indermishra">Indrajeet Mishra</a> for his valuable insights about testing and debugging the gem.Our team leader <a href ="https://github.com/stormfire">Mr. Pankaj Gupta</a> has provided invaluable support and guidance throughout the project.
