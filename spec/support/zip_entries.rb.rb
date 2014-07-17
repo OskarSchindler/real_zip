@@ -1,4 +1,3 @@
-require 'zip/zip'
 
 def zip_entries file # to wrap this crap
   result = []  

@@ -1,28 +1,42 @@
-# realZip
-
-## Warning
-This gem is currently under development. Please refrain from using it.
+# RealZip
 
 ## Usage
 
 ```ruby
 require 'real_zip'
 
-# create zip file with given file structure and transfer files to the directory of your choice within the zip file
+# create zip file with given file structure and transfer files to the directory of your choice within the zip file.
 
-RealZip 'temp.zip', {dir1:[:f1,:f2],dir2:[:f3,{dir4:[:f4]}]}
 
-# ensure it works
+## Use Cases
+
+RealZip 'temp.zip', {:html => ["/home/Files/a.html"], :pdf => ["/home/Files/c.pdf"], :rb => ["/home/Files/b.rb"]}
+
+# Results in
 puts `unzip -l temp.zip | awk '{print $4}'`
 ===========================================
-dir1/
-dir2/
-dir2/dir4/
-dir1/f1
-dir1/f2
-dir2/f3
-dir2/dir4/f4
+
+html/
+pdf/
+rb/
+html/a.html
+pdf/c.pdf
+rb/b.rb
 ```
+
+RealZip 'temp.zip', {'doc/html' => ["/home/Files/a.html"], 'doc/pdf' => ["/home/Files/c.pdf"], 'doc/pdf/rb' => ["/home/Files/b.rb"]}
+
+# Results in
+puts `unzip -l temp.zip | awk '{print $4}'`
+===========================================
+doc/html/
+doc/pdf/
+doc/pdf/rb/
+doc/html/a.html
+doc/pdf/c.pdf
+doc/pdf/rb/b.rb
+```
+
 
 ## Installation
 
@@ -32,7 +46,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -47,4 +61,4 @@ Or install it yourself as:
 5. Create new Pull Request
 
 ## Acknowledgement
-This is software is built upon Alexander K's Fake_Zip gem.A hearty thanks to him for making it freely available.
+This software is built upon Alexander K's Fake_Zip gem. A hearty thanks to him for making it freely available. This project would not be possible without <a href="https://github.com/rbaghele">Ravi Baghele</a>'s major input in implementing the core file tranfer functionality.I would also like to thank <a href="https://github.com/indermishra">Indrajeet Mishra</a> for his valuable insights about testing and debugging the gem.Our team leader <a href ="https://github.com/stormfire">Mr. Pankaj Gupta</a> has provided invaluable support and guidance throughout the project.

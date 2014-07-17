@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = RealZip::VERSION
   spec.authors       = ["Prasad R."]
   spec.email         = ["thelaptopsage@gmail.com"]
-  spec.description   = %q{ build zip files with given file structure and transfer files to it for testing }.strip
-  spec.summary       = %q{ build zip files with given file structure and transfer files to it for testing }.strip
+  spec.description   = %q{ build zip files with given file structure and transfer files to it }.strip
+  spec.summary       = %q{ build zip files with given file structure and transfer files to it }.strip
   spec.homepage      = "https://github.com/OskarSchindler/real_zip"
   spec.license       = "MIT"
 
@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
 
   # deps:
   spec.add_development_dependency "rspec"
-  spec.add_runtime_dependency "rubyzip"    
+  spec.add_runtime_dependency "rubyzip", '< 1.0.0'    
 end
