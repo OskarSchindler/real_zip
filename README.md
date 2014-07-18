@@ -8,7 +8,7 @@ require 'real_zip'
 # create zip file with given file structure and transfer files to the directory of your choice within the zip file.
 
 
-RealZip 'real.zip', {:dir1 => ["/path/to/file1"], :dir2 => ["path/to/file2"], 'dir2/dir3' => ["path/to/file3"]}
+RealZip 'real.zip', {:dir1 => ["/path/to/file1"], :dir2 => ["path/to/folder/"], 'dir2/dir3' => ["path/to/file3"]}
 
 
 ## Use Cases
